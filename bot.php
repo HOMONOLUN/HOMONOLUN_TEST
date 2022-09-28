@@ -10,13 +10,14 @@ function PrintAnswer($str)
     print_r($str);
     echo"<pre>";
 }
-
+//new comment here
 function getTelegramApi($method, $options = null)
 {
     $str_request = API_URL . TOKEN . '/' . $method;
     if($options)
     {
-        $str_request .='?' . http_build_query($options);
+        die();
+        //$str_request .='?' . http_build_query($options);
     }
     $request = file_get_contents($options);
     return json_decode($request, 1);
